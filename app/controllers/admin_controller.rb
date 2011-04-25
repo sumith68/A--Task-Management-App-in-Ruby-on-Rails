@@ -23,7 +23,7 @@ class AdminController < ApplicationController
 	def create_user
 		@user = User.new
 		@user.name = params[:createform][:user_name]
-		@user.hashed_password = params[:createform][:password]
+		@user.hashed_password = params[:createform][:password].crypt("FY")
 		@user.salt = "FY"
 		@user.save
 	end
