@@ -1,0 +1,36 @@
+<h1> Welcome User</h1>
+<table border="0" width="700">
+ <tbody>
+  <tr>
+   <td><b>Task</b></td>
+   <td><b>Status</b></td>
+   <td><b>Deadline</b></td>
+   <td><b>Assignsto</b></td>
+  </tr>
+<%
+        for m in @man do
+%>
+<form action="/updation" method="post">
+ <tr>
+   <td><label for="title"><%= m[:title] %> </label></td>
+   <td><select name="cmbstatus">
+       <option value="current"><%= m[:status] %></option>
+
+       <option value="open">open</option>
+       <option value="working"> working</option>
+       <option value="closed">closed</option>
+
+   </select></td>
+   <td><label  for="deadline" ><%= m[:deadline] %> </label></td>
+   <td><label  for="assignsto"><%= m[:assignsto] %></label></td>
+   <input type="hidden" name="h_id" value="<%= m[:id] %>" />
+   <td><input type="submit" value="update" /></td>
+ </tr>
+</form>
+<%
+end
+%>
+</tbody>
+</table>
+
+

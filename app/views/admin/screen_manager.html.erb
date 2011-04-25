@@ -1,0 +1,21 @@
+<h1> Welcome </h1>
+<form name="f1" action="/articles" method="post">
+<table border="0" width=300>
+ <tbody>
+   <tr>
+     <td><b>Employer name</b></td>
+     <td><select name="emp_name">
+         <% for i in @nam do %>
+             <option value="<%= i[:name] %>"> <%= i[:name] %> </option>
+
+         <% end %>
+
+          </select>
+    </td>
+   </tr>
+   <tr>
+     <td><input type="submit" value="submit"  />
+   </tr>
+</form>
+
+

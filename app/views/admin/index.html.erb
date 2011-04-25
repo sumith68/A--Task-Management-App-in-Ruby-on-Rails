@@ -1,0 +1,9 @@
+<div class="panel">
+<%= form_tag :action=>'authenticate' %>
+User name:
+<%= text_field("adminform", "user_name",:size=>"20" ) %>
+Password:
+<%= password_field("adminform", "password",:size=>"20" ) %>
+<input type="submit" value=" LOGIN " />
+</div>
+<p class="flip"><b>AdminLogin</b></p>

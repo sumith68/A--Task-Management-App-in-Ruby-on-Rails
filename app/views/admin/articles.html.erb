@@ -1,0 +1,33 @@
+<h1> Welcome Manager</h1>
+<table border="0" width="700">
+ <tbody>
+  <tr>
+   <td><b>Task</b></td>
+   <td><b>Status</b></td>
+   <td><b>Deadline</b></td>
+   <td><b>Assignsto</b></td>
+  </tr>
+<%
+  for man in @man do
+%>
+ <form action="/update" method="post">
+ <tr>
+
+   <td><label for="title"><%= man[:title] %></label> </td>
+   <td><select name="cmbstatus">
+       <option value="open"> <%= man[:status] %></option>
+       <option value="verified">verified</option>
+       </select></td>
+   <td><label for="deadline"><%= man[:deadline] %></label></td>
+   <td><label for="assignsto"><%= man[:assignsto] %></label></td>
+   <td><input type="submit" value="update" /></td>
+   <input type="hidden" name="h_id" value="<%= man[:id] %>" />
+ </tr>
+</form>
+<%
+end
+%>
+
+</tbody>
+</table>
+

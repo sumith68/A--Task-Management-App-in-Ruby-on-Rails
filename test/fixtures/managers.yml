@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  user_id: 1
+  title: MyString
+  status: MyString
+  deadline: MyString
+  assignsto: MyString
+
+two:
+  user_id: 1
+  title: MyString
+  status: MyString
+  deadline: MyString
+  assignsto: MyString

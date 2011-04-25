@@ -1,0 +1,26 @@
+<h1> All Tasks</h1>
+<table border="1" width="700" >
+ <tbody>
+  <tr>
+   <td><b>Task</b></td>
+   <td><b>Status</b></td>
+   <td><b>Deadline</b></td>
+   <td><b>Assignsto</b></td>
+  </tr>
+<%
+  for man in @all do
+%>
+ <tr>
+
+   <td><label for="title"><%= man[:title] %></label> </td>
+   <td><label for="status"><%= man[:status] %></label></td>
+   <td><label for="deadline"><%= man[:deadline] %></label></td>
+   <td><label for="assignsto"><%= man[:assignsto] %></label></td>
+ </tr>
+<%
+end
+%>
+
+</tbody>
+</table>
+
