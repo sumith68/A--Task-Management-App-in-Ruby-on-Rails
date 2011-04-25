@@ -1,8 +1,8 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
-  user_name: MyString
-  hashed_password: MyString
+  user_name: admin
+  hashed_password: FYaL6SXiad88Q
 
 two:
   user_name: MyString
